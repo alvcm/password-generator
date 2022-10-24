@@ -4,12 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/app.css">
 
     <title>Password Generator</title>
 </head>
 <body>
     
+    <main class="main">
+        <div class="container">
+            <h1 class="title">Password Generator</h1>
+            <div class="options">
+                <form action="">
+                    <div class="options__range">
+                        <label for="nb-length">Longitud de contraseña</label><br>
+                        <input id="nb-length" class="options__number" type="number" value="12" min="1" max="30">
+                        <input id="rg-length" type="range" value="12" min="1" max="30" >
+                    </div>
+                    
+                    <div class="options__checkbox">
+                        <input id="chk-uppercase" type="checkbox" checked="true">
+                        <label for="chk-uppercase">Mayúsculas</label>
+                    </div>
+                    
+                    <div class="options__checkbox">
+                        <input id="chk-lowercase" type="checkbox" checked="true">
+                        <label for="chk-lowercase">Minúsculas</label>
+                    </div>
+                    
+                    <div class="options__checkbox">
+                        <input id="chk-numbers" type="checkbox" checked="true">
+                        <label for="chk-numbers">Números</label>
+                    </div>
+                    <div class="options__checkbox">
+                        <input id="chk-symbols" type="checkbox" checked="true">
+                        <label for="chk-symbols">Simbolos</label>
+                    </div>
+                </form>
+            </div>
+            <div class="password">
+                <form action="" class="password__text">
+                    <input id="password-text" class="password__generated" type="text">
+                </form>
+                <button id="btn-copy" class="password__button">
+                    Copiar
+                </button>
+                <button id="btn-reload" class="password__button">
+                    Recargar
+                </button>
+            </div>
+        </div>
+    </main>
     <script src="./src/main.js"></script>
 </body>
 </html>
